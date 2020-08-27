@@ -79,11 +79,14 @@
                 </div>
             @endif
 
+
             <div class="content">
                 <div class="title m-b-md">
                     Hello world!
                 </div>
-
+                @foreach ($links as $link)
+                    <a href="{{ $link->url }}">{{ $link->title }}</a>
+                @endforeach
             </div>
         </div>
     </body>
